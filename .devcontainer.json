@@ -1,0 +1,8 @@
+{
+    "name": "Math Geneagrapher",
+    "build": {
+        "context": ".",
+        "dockerfile": "Dockerfile"
+    },
+    "postAttachCommand" : "chmod a+x run_graphs.sh && /bin/sh run_graphs.sh"
+}
