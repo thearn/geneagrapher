@@ -8,4 +8,8 @@ LABEL maintainer="tristanhearn@gmail.com"
 RUN apt-get update && apt-get install -y graphviz && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install geneagrapher
+WORKDIR /workspaces/geneagrapher
+
+COPY . /workspaces/geneagrapher
+
+RUN pip install --upgrade pip && pip install .
